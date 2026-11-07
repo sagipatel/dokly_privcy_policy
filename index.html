@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Privacy Policy – Doky</title>
+<meta name="description" content="Privacy Policy for Doky – Image to PDF converter, PDF tools and Secure Vault.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700;800&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #1F2A44;
+    --text: #2E3648;
+    --muted: #5B6475;
+    --paper: #FBFCFE;
+    --sheet: #FFFFFF;
+    --rule: #E3E7EE;
+    --accent: #0E7C7B;
+    --accent-soft: #E6F3F2;
+    color-scheme: light;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --ink: #E8ECF4;
+      --text: #CDD3DF;
+      --muted: #8E97A8;
+      --paper: #121722;
+      --sheet: #1A2030;
+      --rule: #2B3346;
+      --accent: #4FC2BF;
+      --accent-soft: #17302F;
+      color-scheme: dark;
+    }
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; scroll-padding-top: 1.5rem; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--text);
+    font-family: "Source Serif 4", Georgia, "Times New Roman", serif;
+    font-size: 1.0625rem;
+    line-height: 1.7;
+    padding: env(safe-area-inset-top, 0px) 0 env(safe-area-inset-bottom, 0px);
+  }
+  h1, h2, h3, .sans {
+    font-family: "Manrope", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    color: var(--ink);
+  }
+  a { color: var(--accent); text-underline-offset: 3px; }
+  a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 2px; }
+
+  /* Header */
+  header {
+    max-width: 72rem;
+    margin: 0 auto;
+    padding: 3.5rem 1.5rem 2.5rem;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 1.25rem 1.5rem;
+    align-items: center;
+  }
+  .mark {
+    width: 64px; height: 80px;
+    position: relative;
+  }
+  .mark svg { width: 100%; height: 100%; display: block; }
+  header h1 {
+    margin: 0;
+    font-size: clamp(2rem, 5vw, 3.25rem);
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+  }
+  header p { margin: 0.35rem 0 0; color: var(--muted); font-family: "Manrope", system-ui, sans-serif; font-size: 0.95rem; }
+
+  /* Promise strip: the one memorable element */
+  .promises {
+    max-width: 72rem;
+    margin: 0 auto 3rem;
+    padding: 0 1.5rem;
+  }
+  .promises-inner {
+    border: 1.5px solid var(--accent);
+    background: var(--accent-soft);
+    border-radius: 14px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .promise { padding: 1.4rem 1.5rem; }
+  .promise + .promise { border-left: 1px dashed var(--accent); }
+  .promise h2 { font-size: 1.05rem; margin: 0 0 0.35rem; font-weight: 700; }
+  .promise p { margin: 0; font-size: 0.98rem; line-height: 1.55; }
+
+  /* Layout */
+  .layout {
+    max-width: 72rem;
+    margin: 0 auto;
+    padding: 0 1.5rem 4rem;
+    display: grid;
+    grid-template-columns: 15rem minmax(0, 1fr);
+    gap: 3.5rem;
+  }
+  nav.toc {
+    position: sticky;
+    top: calc(1.5rem + env(safe-area-inset-top, 0px));
+    align-self: start;
+    font-family: "Manrope", system-ui, sans-serif;
+    font-size: 0.9rem;
+  }
+  nav.toc h2 { font-size: 0.95rem; margin: 0 0 0.75rem; }
+  nav.toc ol { list-style: none; margin: 0; padding: 0; counter-reset: s; }
+  nav.toc li { counter-increment: s; }
+  nav.toc a {
+    display: flex; gap: 0.6rem;
+    padding: 0.32rem 0;
+    color: var(--muted);
+    text-decoration: none;
+  }
+  nav.toc a::before { content: counter(s); min-width: 1.4rem; color: var(--accent); font-weight: 700; }
+  nav.toc a:hover { color: var(--ink); }
+
+  main { max-width: 42rem; }
+  main section { padding-bottom: 1.25rem; margin-bottom: 2rem; border-bottom: 1px solid var(--rule); counter-increment: sec; }
+  main { counter-reset: sec; }
+  main section:last-child { border-bottom: 0; }
+  main h2 {
+    font-size: 1.45rem;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    margin: 0 0 0.9rem;
+    display: flex; gap: 0.7rem; align-items: baseline;
+  }
+  main h2::before {
+    content: counter(sec);
+    color: var(--accent);
+    font-size: 1rem;
+    min-width: 1.6rem;
+  }
+  main h3 { font-size: 1.05rem; margin: 1.5rem 0 0.4rem; }
+  main p, main li { max-width: 68ch; }
+  main ul { padding-left: 1.2rem; }
+  main li { margin-bottom: 0.4rem; }
+  main li::marker { color: var(--accent); }
+
+  .table-wrap { overflow-x: auto; margin: 1rem 0; }
+  table { border-collapse: collapse; width: 100%; font-size: 0.97rem; min-width: 28rem; }
+  th, td { text-align: left; padding: 0.7rem 0.8rem; border-bottom: 1px solid var(--rule); vertical-align: top; }
+  th { font-family: "Manrope", system-ui, sans-serif; font-size: 0.88rem; color: var(--ink); background: var(--sheet); }
+
+  .note {
+    background: var(--sheet);
+    border-left: 3px solid var(--accent);
+    padding: 0.9rem 1.1rem;
+    border-radius: 0 8px 8px 0;
+    margin: 1.1rem 0;
+  }
+
+  footer {
+    border-top: 1px solid var(--rule);
+    padding: 2rem 1.5rem calc(2rem + env(safe-area-inset-bottom, 0px));
+    text-align: center;
+    color: var(--muted);
+    font-family: "Manrope", system-ui, sans-serif;
+    font-size: 0.88rem;
+  }
+
+  @media (max-width: 860px) {
+    .layout { grid-template-columns: 1fr; gap: 2rem; }
+    nav.toc { position: static; background: var(--sheet); border: 1px solid var(--rule); border-radius: 12px; padding: 1rem 1.25rem; }
+    .promises-inner { grid-template-columns: 1fr; }
+    .promise + .promise { border-left: 0; border-top: 1px dashed var(--accent); }
+    header { padding-top: 2.25rem; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="mark" aria-hidden="true">
+    <svg viewBox="0 0 64 80" fill="none">
+      <path d="M4 6a4 4 0 0 1 4-4h34l18 18v54a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4V6Z" fill="var(--sheet)" stroke="var(--ink)" stroke-width="2.5"/>
+      <path d="M42 2v14a4 4 0 0 0 4 4h14" stroke="var(--ink)" stroke-width="2.5"/>
+      <rect x="20" y="40" width="24" height="20" rx="3" fill="var(--accent)"/>
+      <path d="M25 40v-5a7 7 0 0 1 14 0v5" stroke="var(--accent)" stroke-width="3"/>
+      <circle cx="32" cy="49" r="2.5" fill="var(--sheet)"/>
+    </svg>
+  </div>
+  <div>
+    <h1>Doky Privacy Policy</h1>
+    <p>Effective date: November 7, 2026 · Last updated: November 7, 2026</p>
+  </div>
+</header>
+
+<div class="promises" role="region" aria-label="Privacy summary">
+  <div class="promises-inner">
+    <div class="promise">
+      <h2 class="sans">Your files stay on your device</h2>
+      <p>Images and PDFs are converted, compressed, split and merged on your phone. We don’t upload them to our servers.</p>
+    </div>
+    <div class="promise">
+      <h2 class="sans">No document database</h2>
+      <p>We don’t run any database or cloud storage that holds your documents. We have nothing of yours to read, sell or leak.</p>
+    </div>
+    <div class="promise">
+      <h2 class="sans">Secure Vault is encrypted</h2>
+      <p>Files you put in the Vault are encrypted and locked on your device. Only you can open them.</p>
+    </div>
+  </div>
+</div>
+
+<div class="layout">
+  <nav class="toc" aria-label="Contents">
+    <h2>Contents</h2>
+    <ol>
+      <li><a href="#about">About this policy</a></li>
+      <li><a href="#features">What Doky does</a></li>
+      <li><a href="#documents">Your documents and images</a></li>
+      <li><a href="#vault">Secure Vault</a></li>
+      <li><a href="#permissions">App permissions</a></li>
+      <li><a href="#collected">Information we may collect</a></li>
+      <li><a href="#third-party">Third-party services</a></li>
+      <li><a href="#sharing">Sharing your information</a></li>
+      <li><a href="#retention">Retention and deletion</a></li>
+      <li><a href="#security">Security</a></li>
+      <li><a href="#children">Children’s privacy</a></li>
+      <li><a href="#rights">Your rights</a></li>
+      <li><a href="#changes">Changes to this policy</a></li>
+      <li><a href="#contact">Contact us</a></li>
+    </ol>
+  </nav>
+
+  <main>
+    <section id="about">
+      <h2>About this policy</h2>
+      <p>This Privacy Policy explains how <strong>[Your Company / Developer Name]</strong> (“we”, “us” or “our”) handles information when you use the Doky mobile application (the “App”). By using Doky, you agree to the practices described here. If you do not agree, please do not use the App.</p>
+    </section>
+
+    <section id="features">
+      <h2>What Doky does</h2>
+      <p>Doky is a document utility app. Its features include:</p>
+      <ul>
+        <li>Converting images and photos to PDF</li>
+        <li>Compressing PDF files to reduce their size</li>
+        <li>Splitting a PDF into separate files or pages</li>
+        <li>Merging multiple PDFs into one</li>
+        <li>Converting PDF pages to images</li>
+        <li>Other PDF and document tools that may be added over time</li>
+        <li>A Secure Vault for storing private documents on your device</li>
+      </ul>
+    </section>
+
+    <section id="documents">
+      <h2>Your documents and images</h2>
+      <p>All document processing in Doky happens locally on your device. When you convert, compress, split, merge or otherwise edit a file, the work is done by the App on your phone.</p>
+      <ul>
+        <li>We do not upload your images, PDFs or documents to our servers.</li>
+        <li>We do not operate any database or cloud storage that keeps copies of your documents.</li>
+        <li>We cannot view, access, read or recover your files.</li>
+        <li>The files you create are saved only where you choose to save them on your device.</li>
+      </ul>
+      <p>If you choose to share a file from Doky using another app (for example email, WhatsApp, Google Drive), that file is handled under the privacy policy of the app or service you share it with.</p>
+    </section>
+
+    <section id="vault">
+      <h2>Secure Vault</h2>
+      <p>The Secure Vault lets you keep sensitive documents protected inside the App.</p>
+      <ul>
+        <li><strong>Encrypted storage:</strong> Files added to the Vault are encrypted using strong, industry-standard encryption (such as AES-256) and stored only on your device.</li>
+        <li><strong>Locked access:</strong> The Vault is protected by a PIN, password, pattern and/or your device’s biometric lock (fingerprint or face unlock), depending on what you set up.</li>
+        <li><strong>No cloud copy:</strong> Vault files are never sent to us and are not stored in any database we control.</li>
+        <li><strong>Biometrics stay on your device:</strong> When you use fingerprint or face unlock, verification is done by your device’s operating system. Doky never receives or stores your biometric data.</li>
+      </ul>
+      <div class="note">
+        <strong>Important:</strong> Because we don’t keep a copy of your files or your Vault password, we cannot recover Vault contents if you forget your password, uninstall the App, clear the App’s data, or lose or reset your device. Please keep backups of important documents.
+      </div>
+    </section>
+
+    <section id="permissions">
+      <h2>App permissions</h2>
+      <p>Doky asks only for the permissions needed for its features. You can grant or deny them, and change them anytime in your device settings. Some features may not work without the related permission.</p>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th scope="col">Permission</th><th scope="col">Why we need it</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Camera</td><td>To capture photos of documents that you want to convert into PDF.</td></tr>
+            <tr><td>Photos / Media / Files (Storage)</td><td>To let you pick images and PDFs from your device and to save the files you create.</td></tr>
+            <tr><td>Biometric (fingerprint / face)</td><td>To unlock the Secure Vault. Handled entirely by your device’s operating system.</td></tr>
+            <tr><td>Notifications (if used)</td><td>To let you know when a long task, such as compressing or merging a large file, is complete.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="collected">
+      <h2>Information we may collect</h2>
+      <p>We do not ask you to create an account, and we do not collect your name, phone number, address or the content of your documents.</p>
+      <p>To keep the App working well, limited non-personal technical information may be collected automatically through the services listed in the next section, such as:</p>
+      <ul>
+        <li>Device model, operating system version and App version</li>
+        <li>Crash reports and error logs (which do not include your document contents)</li>
+        <li>General usage statistics, such as which features are used most often</li>
+        <li>Advertising identifiers, if the App shows ads</li>
+      </ul>
+      <p>This information is used only to fix bugs, improve performance and understand how the App is used.</p>
+    </section>
+
+    <section id="third-party">
+      <h2>Third-party services</h2>
+      <p>Doky may use the following third-party services, which may collect information as described in their own privacy policies:</p>
+      <ul>
+        <li>Google Play Services – <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Privacy Policy</a></li>
+        <!-- Remove any services below that your app does not use, and add any others you do use. -->
+        <li>Google AdMob (advertising) – <a href="https://support.google.com/admob/answer/6128543" target="_blank" rel="noopener">Privacy information</a></li>
+        <li>Firebase Analytics &amp; Crashlytics – <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Privacy information</a></li>
+      </ul>
+      <p>These services never receive the contents of your documents, images or Vault files.</p>
+    </section>
+
+    <section id="sharing">
+      <h2>Sharing your information</h2>
+      <p>We do not sell, rent or trade your information. Since we don’t store your documents, we have no documents to share. We may disclose limited technical information only if required by law, or to protect the rights, safety and security of our users and the App.</p>
+    </section>
+
+    <section id="retention">
+      <h2>Retention and deletion</h2>
+      <p>Your files and Vault contents remain on your device for as long as you keep them. You are in full control:</p>
+      <ul>
+        <li>Delete any file from within the App or from your device storage.</li>
+        <li>Clearing the App’s data or uninstalling Doky permanently deletes the Vault and all its contents.</li>
+        <li>Technical data held by third-party services is retained according to their own policies.</li>
+      </ul>
+    </section>
+
+    <section id="security">
+      <h2>Security</h2>
+      <p>We take reasonable measures to protect your information, including on-device processing and encryption of Vault files. However, no method of electronic storage is completely secure. We recommend keeping your device protected with a screen lock and keeping both your device and the App up to date.</p>
+    </section>
+
+    <section id="children">
+      <h2>Children’s privacy</h2>
+      <p>Doky is not directed at children under the age of 13 (or the minimum age required in your country). We do not knowingly collect personal information from children. If you believe a child has provided us with personal information, please contact us and we will take appropriate steps.</p>
+    </section>
+
+    <section id="rights">
+      <h2>Your rights</h2>
+      <p>Depending on where you live, laws such as India’s Digital Personal Data Protection Act, 2023, the EU General Data Protection Regulation (GDPR) or the California Consumer Privacy Act (CCPA) may give you rights to access, correct or delete your personal data, or to withdraw consent.</p>
+      <p>Because Doky does not collect or store your documents or personal details on our servers, most of your data is already under your direct control on your device. For any request about technical data, contact us using the details below.</p>
+    </section>
+
+    <section id="changes">
+      <h2>Changes to this policy</h2>
+      <p>We may update this Privacy Policy from time to time, for example when we add new features. When we do, we will update the “Last updated” date at the top of this page. Continued use of the App after changes means you accept the updated policy.</p>
+    </section>
+
+    <section id="contact">
+      <h2>Contact us</h2>
+      <p>If you have any questions or concerns about this Privacy Policy, please contact us:</p>
+      <p>
+        <strong>[Your Company / Developer Name]</strong><br>
+        Email: <a href="mailto:support@example.com">[support@example.com]</a><br>
+        Address: [Your Address, City, State, India]
+      </p>
+    </section>
+  </main>
+</div>
+
+<footer>
+  © 2026 [Your Company / Developer Name]. All rights reserved.
+</footer>
+
+</body>
+</html>
